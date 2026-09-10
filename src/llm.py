@@ -1,9 +1,11 @@
 
 import os
 from abc import ABC, abstractmethod
+from urllib import response
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
+from typer import prompt
 
 
 class LLMProvider(ABC):
@@ -81,8 +83,17 @@ Question:
         ]
 
         response = self.llm.invoke(messages)
+          
+        if isinstance(response.content, list):
+            answer = "".join(
+               block["text"]
+               for block in response.content
+               if block.get("type") == "text"
+            )
+        else:
+            answer = response.content
 
-        return response.content
+        return answer
 
 
 class LLMManager:
