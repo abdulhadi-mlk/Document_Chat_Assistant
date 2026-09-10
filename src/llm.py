@@ -1,11 +1,9 @@
 
 import os
 from abc import ABC, abstractmethod
-from urllib import response
 
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_core.messages import SystemMessage, HumanMessage
-from typer import prompt
 
 
 class LLMProvider(ABC):

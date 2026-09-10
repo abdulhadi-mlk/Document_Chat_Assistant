@@ -1,6 +1,6 @@
 import os
 from pathlib import Path
-import pymupdf  # PyMuPDF
+import pymupdf
 from docx import Document
 from typing import List, Tuple
 
