@@ -4,7 +4,6 @@ chromadb==1.5.9
 ConfigParser==7.2.0
 cppyy==3.5.0
 cryptography==50.0.1
-docutils==0.23
 filelock==3.32.6
 fontTools==4.64.0
 h2==4.4.1
@@ -24,7 +23,6 @@ pyOpenSSL==26.4.0
 python-dotenv==1.2.3
 python_docx==1.2.0
 redis==8.1.0
-Sphinx==9.1.0
 streamlit==1.63.0
 thread==2.0.6
 typing_extensions==4.16.0
